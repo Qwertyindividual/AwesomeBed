@@ -9,7 +9,7 @@ const port = parseInt(process.env.PORT) || 4000;
 // Express app
 const app = express();
 // Middleware
-const {errorHandling} = require('./middleware/ErrorHandling');
+const {errHandling} = require('./middleware/ErrorHandling');
 //
 const cookieParser = require('cookie-parser');
 /*
@@ -37,4 +37,4 @@ app.listen(port, ()=> {
     console.log(`Server is running`)
 });
 // Handling all errors
-app.use(errorHandling);
+app.use(errHandling);
